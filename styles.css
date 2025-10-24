@@ -1,0 +1,68 @@
+/* Theme tokens */
+:root{
+  --bg:#0b0c10;
+  --text:#e5e7eb;
+  --muted:#9ca3af;
+  --glass:rgba(255,255,255,.06);
+  --brand:#14b8a6;
+  --accent:#ef4444;
+  --grid:#1f2430;
+}
+:root.light{
+  --bg:#f7f7fb;
+  --text:#111827;
+  --muted:#6b7280;
+  --glass:#ffffff;
+  --brand:#0ea5e9;
+  --accent:#dc2626;
+  --grid:#e5e7eb;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+  background:radial-gradient(1200px 800px at 15% -10%, #1b1c22 0, var(--bg) 50%);
+  color:var(--text);
+  transition:background .3s,color .3s;
+}
+.wrap{max-width:900px;margin:0 auto;padding:22px}
+.top{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.top h1{margin:0;font-size:26px;letter-spacing:.3px}
+
+/* Glass cards */
+.glass{
+  background:var(--glass);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  box-shadow:0 14px 40px rgba(0,0,0,.25);
+}
+
+/* Switch like iPhone */
+.switch{display:flex;align-items:center;gap:10px}
+.switch-input{display:none}
+.switch-label{
+  position:relative;width:58px;height:32px;border-radius:999px;display:inline-block;
+  background:#2f313b;border:1px solid rgba(255,255,255,.1);cursor:pointer;transition:all .25s;
+}
+.switch-inner{position:absolute;inset:3px;border-radius:999px;background:linear-gradient(180deg,#3a3d49,#22242c);transition:.25s}
+.switch-knob{position:absolute;top:3px;left:3px;width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 4px 12px rgba(0,0,0,.35);transition:transform .25s}
+.switch-input:checked + .switch-label{background:#1b9aaa;border-color:rgba(27,154,170,.35)}
+.switch-input:checked + .switch-label .switch-inner{background:linear-gradient(180deg,#35b4c6,#0f7d8f)}
+.switch-input:checked + .switch-label .switch-knob{transform:translateX(26px)}
+.toggle-text{color:var(--muted);font-weight:600}
+
+/* HUD */
+.hud{display:flex;align-items:center;justify-content:space-between;padding:14px 16px;margin-bottom:14px}
+.stat{display:flex;flex-direction:column;gap:2px}
+.stat span{color:var(--muted);font-size:12px}
+.stat strong{font-size:20px}
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.btn{border:none;padding:10px 14px;border-radius:12px;background:#2b2e3a;color:#fff;font-weight:700;cursor:pointer}
+.btn.primary{background:var(--brand)}
+.select{padding:10px 12px;border-radius:12px;border:1px solid rgba(255,255,255,.12);background:transparent;color:var(--text)}
+
+/* Stage */
+.stage{padding:14px;display:grid;place-items:center}
+canvas{width:600px;height:600px;border-radius:14px;background:linear-gradient(180deg,#13141a,#0e1016);border:1px solid rgba(255,255,255,.06)}
+.foot{margin-top:10px;color:var(--muted);text-align:center}

@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snake Pro — Azra Edition</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Snake Pro</h1>
+      <div class="switch">
+        <input id="themeToggle" class="switch-input" type="checkbox" aria-label="Toggle night mode">
+        <label for="themeToggle" class="switch-label">
+          <span class="switch-inner"></span>
+          <span class="switch-knob"></span>
+        </label>
+        <span class="toggle-text">Night</span>
+      </div>
+    </header>
+
+    <section class="hud glass">
+      <div class="stat"><span>Score</span><strong id="score">0</strong></div>
+      <div class="stat"><span>Best</span><strong id="best">0</strong></div>
+      <div class="controls">
+        <button id="playBtn" class="btn primary">Play</button>
+        <button id="pauseBtn" class="btn">Pause</button>
+        <button id="resetBtn" class="btn">Reset</button>
+        <select id="speedSel" class="select" title="Speed">
+          <option value="145">Chill</option>
+          <option value="115" selected>Normal</option>
+          <option value="90">Fast</option>
+          <option value="70">Insane</option>
+        </select>
+      </div>
+    </section>
+
+    <main class="stage glass">
+      <canvas id="board" width="600" height="600" aria-label="Snake board"></canvas>
+    </main>
+
+    <footer class="foot">Arrow keys or WASD. Don’t crash.</footer>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
