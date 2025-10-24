@@ -1,7 +1,7 @@
-# Snake Pro (Smooth Canvas + Night Toggle)
+# Snake Pro 
 - Canvas-based 60fps loop with delta-timing and adjustable speed.
-- iPhone-style Night toggle; theme persisted in localStorage.
-- Persistent best score in localStorage.
+- Night toggle Theme 
+- Persistent best score 
 - Arrow Keys / WASD.
 
 ## Run
